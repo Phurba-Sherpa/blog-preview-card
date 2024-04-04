@@ -1,0 +1,134 @@
+:root {
+
+    --color-primary:  #F4D04E;
+    --color-white: #fff;
+    --color-black:  #111;
+    --color-grey-1:  #7F7F7F;
+
+    --fs-base: 1.4rem;
+    --fs-sm: 1.2rem;
+    --fs-xl: 2rem;
+
+    --rounded-lg: 2rem;
+    --rounded-sm: 1rem;
+    --rounded-xs: .4rem;
+
+
+    --margin-xs: 1.2rem;
+    --margin-sm: 2.4rem   
+}
+
+@media only screen and (min-width: 37.5em) {
+    :root {
+        --fs-xl: 2.4rem;
+        --fs-base: 1.6rem;
+        --fs-sm: 1.4rem;
+    }
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+*,
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ===================
+    base style
+==================== */
+body {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: "Figtree", sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: var(--fs-xl);
+    font-weight: 800;
+}
+
+p {
+    margin-bottom: var(--margin-xs);
+}
+
+
+/* ===================
+    blog style
+==================== */
+
+.blog {
+    background-color: var(--color-white);
+    padding: 2.4rem;
+    max-width: 38.4rem;
+    border-radius: var(--rounded-lg);
+    border: 1px solid var(--color-black);
+    box-shadow: 1.2rem 1.2rem 0 rgba(0, 0, 0, 1);
+}
+
+.blog__title:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.blog__img {
+    border-radius: var(--rounded-sm);
+    min-height: 20rem;
+    object-fit: cover;
+    margin-bottom: var(--margin-sm);
+}
+
+
+.blog__desc {
+    margin-bottom: var(--margin-sm);
+    font-size: var(--fs-base);
+    color: var(--color-grey-1);
+}
+
+.blog__tag {
+    display: inline-block;
+    background-color: var(--color-primary);
+    font-weight: 800;
+    padding: .4rem 1.2rem;
+    border-radius: var(--rounded-xs);
+}
+
+
+
+/* ====================
+    author
+===================== */
+.author {
+    display: flex;
+    gap: var(--margin-xs);
+    align-items: center;
+}
+.author__photo {
+    height: 3.2rem;
+    width: 3.2rem;
+}
+
+.author__name {
+    font-weight: 800;
+}
